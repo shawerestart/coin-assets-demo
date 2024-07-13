@@ -1,21 +1,5 @@
+import type { Config, Method, Params, Props } from "@/types/request.types";
 import queryString from "query-string";
-
-type Method = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
-
-interface Params {
-  cacheTime?: number; //缓存时间，单位为s。默认强缓存，0为不缓存
-  params?: Record<string, any>;
-}
-
-interface Props extends Params {
-  url: string;
-  method: Method;
-}
-
-type Config =
-  | { next: { revalidate: number } }
-  | { cache: "no-store" }
-  | { cache: "force-cache" };
 
 const getCacheTime = (cacheTime?: number): Config => {
   if (cacheTime) {
@@ -138,5 +122,5 @@ class Request {
 }
 
 const request = new Request();
-
+export { getCacheTime, Request };
 export default request;
