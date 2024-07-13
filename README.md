@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
+
+```bash
+yarn install
+```
 
 First, run the development server:
 
+<ul>
+<li>copy .env.example to .env</li>
+<li>enter your api key in .env</li>
+<li>enter your api url in .env</li>
+</ul>
+
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Supported Features
+
+✅ Support Responsive Design powered by Tailwind CSS
+
+✅ Test Coverage 81.91%;
+
+✅ introduction of architecture design
+
+✅ Using Node.js and React with TypeScript
+
+✅ Consideration of scalability, you can add your need components to the components folder and import them in the app router. and you can set your api key and api url in .env file.
+
+✅ Consideration of minimizing charging fees for api calls, we use fetch with cache to call api. you can set your favorite cache time when api call.
+
+❌ (Optional) Dockerizing the whole application, coming soon...
+
+✅ (Optional) Implementation of extra features you can think of (we provide asset icon and reload function for the icon asset preview page)
+
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Architecture
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+├─apis
+│  └─ API file entry
+├─app
+│  └─directory to app router entry
+├─components
+│  └─public component entry
+├─public
+│  └─ public files, include icons, public file etc.
+├─types
+│  └─ typescript types files
+└─utils
+   └─ any util files
+.env  // environment path config
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Preview
 
-## Deploy on Vercel
+![preview image](./public/previews/Snipaste_2024-07-13_18-41-14.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Test Corverage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![preview coverage](./public/previews/Snipaste_2024-07-13_18-43-25.png)
+
+
+
