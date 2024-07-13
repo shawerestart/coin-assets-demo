@@ -18,7 +18,6 @@ const MarketAssets = forwardRef((props, ref) => {
     const res = await fetchMarketData({
       filter_asset_id: COIN_LIST.join(";"),
     });
-    console.log("res", res);
     if (res && res.length > 0) {
       setList(res);
     }
@@ -40,7 +39,7 @@ const MarketAssets = forwardRef((props, ref) => {
     <Grid container>
       {list.map((asset) => {
         return (
-          <Grid key={asset.asset_id} xs={12} sm={6} md={6} lg={4}>
+          <Grid key={asset.asset_id} xs={12} sm={6} md={6} lg={4} item={true}>
             <Card className="bg-white p-4 m-4" variant="outlined">
               <div className="text-3xl font-semibold">
                 <img
