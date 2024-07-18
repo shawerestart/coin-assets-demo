@@ -18,8 +18,9 @@ const MarketAssets = forwardRef((props, ref) => {
     const res = await fetchMarketData({
       filter_asset_id: COIN_LIST.join(";"),
     });
-    if (res && res.length > 0) {
-      setList(res);
+    console.log("as", res);
+    if (res && res.data.assets.length > 0) {
+      setList(res.data.assets);
     }
   };
 
