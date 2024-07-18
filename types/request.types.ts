@@ -14,3 +14,10 @@ export type Config =
   | { next: { revalidate: number } }
   | { cache: "no-store" }
   | { cache: "force-cache" };
+
+export interface APIResponse<T> {
+  code: number;
+  data: T;
+  msg: string;
+  success: boolean;
+}
