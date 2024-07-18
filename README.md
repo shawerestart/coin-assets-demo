@@ -1,3 +1,10 @@
+### relative project:
+
+[Frontend](https://github.com/shawerestart/coin-assets-demo)
+
+[Backend](https://github.com/shawerestart/coin-assets-demo-backend)
+
+
 ## Getting Started
 
 ```bash
